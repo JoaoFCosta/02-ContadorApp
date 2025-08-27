@@ -25,19 +25,19 @@ export default function App() {
       <Text style={styles.counterText}>{contadorFormatado}</Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={handleIncrement}>
-          <Text style={styles.buttonText}>Aumentar</Text>
+          <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button} onPress={handleDecrement}>
-          <Text style={styles.buttonText}>Diminuir</Text>
+          <Text style={styles.buttonText}>-</Text>
         </TouchableOpacity>
       </View>
 
       <TouchableOpacity
-        style={[styles.button, styles.resetButton]}
+        style={styles.resetButton}
         onPress={handleReset}
       >
-        <Text style={styles.buttonText}>Zerar</Text>
+        <Text style={styles.button}>Zerar</Text>
       </TouchableOpacity>
 
       <StatusBar style="auto" />
@@ -48,7 +48,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#111",
+    backgroundColor: "#37353E",
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 26,
     fontWeight: "bold",
-    color: "#FF8C00",
+    color: "#D3DAD9",
     marginBottom: 20,
   },
 
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
   },
 
   counterText: {
+    backgroundColor: "#000",
     fontSize: 64,
     borderWidth: 3,
     paddingVertical: 20,
@@ -94,18 +95,20 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    marginTop: 20,
-    borderRadius: 8,
-    alignItems: "center",
+    color: "#fff",
+    padding: 10,
+    borderRadius: 100,
   },
 
   buttonText: {
     backgroundColor: "#888",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 8,
+    width: 70,
+    height: 70,
+    padding: 10,
+    borderRadius: 100,
     color: "#fff",
     fontSize: 18,
+    textAlign: "center",
     fontWeight: "bold",
   },
 
